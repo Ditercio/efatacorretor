@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotação Personalizada - Efatá Corretora de Seguros</title>
+    <meta name="description" content="Solicite sua cotação de Seguro Auto personalizada em menos de 1 minuto com a Efatá Corretora. Atendimento rápido e consultoria gratuita.">
+    <meta name="keywords" content="cotação seguro auto, seguro carro, seguro veicular, consultar seguro">
+    <link rel="canonical" href="https://efataseguros.com.br/cotacao.html">
+    <meta property="og:title" content="Cotação de Seguro Auto - Efatá Corretora">
+    <meta property="og:description" content="Atendimento especializado para montar a melhor proposta de proteção veicular.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://efataseguros.com.br/cotacao.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
+
+    <style>
+        :root {
+            --primary: #0F172A;
+            --accent: #2563EB;
+            --accent-hover: #1D4ED8;
+            --text-dark: #0F172A;
+            --text-light: #475569;
+            --bg-light: #F8FAFC;
+            --white: #FFFFFF;
+            --border: #E2E8F0;
+            --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            --radius: 12px;
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Header / Navbar Minimalista */
+        .header {
+            background-color: var(--white);
+            border-bottom: 1px solid var(--border);
+            padding: 1.25rem 1.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        /* Hero Cotação */
+        .quote-hero {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.9) 100%), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80"><circle cx="40" cy="40" r="30" fill="none" stroke="%23334155" stroke-width="1"/></svg>');
+            background-size: cover;
+            color: var(--white);
+            padding: 3.5rem 1.5rem;
+            text-align: center;
+        }
+
+        .quote-hero h1 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            margin-bottom: 0.75rem;
+        }
+
+        .quote-hero p {
+            color: #94A3B8;
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: -2rem auto 4rem;
+            padding: 0 1.5rem;
+        }
+
+        .grid-main {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+        }
+
+        @media (min-width: 992px) {
+            .grid-main {
+                grid-template-columns: 1.2fr 1fr;
+            }
+        }
+
+        /* Formulario Avançado */
+        .card-quote-form {
+            background-color: var(--white);
+            padding: 2.5rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border);
+        }
+
+        .card-quote-form h2 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .card-quote-form p.sub {
+            font-size: 0.875rem;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 0.375rem;
+            color: var(--text-dark);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+            background-color: #FAFAFA;
+            transition: all 0.2s;
+        }
+
+        .form-control:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+            background-color: var(--white);
+        }
+
+        .lgpd-box {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            margin: 1.25rem 0;
+        }
+
+        .lgpd-box input[type="checkbox"] {
+            margin-top: 0.25rem;
+            accent-color: var(--accent);
+        }
+
+        .lgpd-box label {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            line-height: 1.4;
+        }
+
+        .btn-main {
+            width: 100%;
+            background-color: var(--accent);
+            color: var(--white);
+            border: none;
+            padding: 1rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-main:hover {
+            background-color: var(--accent-hover);
+        }
+
+        /* Conteúdo / Coberturas */
+        .info-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .social-proof {
+            background-color: var(--white);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .stars {
+            color: #F59E0B;
+            font-size: 1.25rem;
+        }
+
+        .proof-text h4 {
+            font-size: 1rem;
+            color: var(--primary);
+        }
+
+        .proof-text p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        .section-box {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .section-box h3 {
+            font-size: 1.25rem;
+            color: var(--primary);
+            margin-bottom: 1.25rem;
+        }
+
+        .coverages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 0.75rem;
+        }
+
+        .coverage-item {
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            padding: 0.75rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .coverage-item svg {
+            width: 16px;
+            height: 16px;
+            color: var(--accent);
+            flex-shrink: 0;
+        }
+
+        .why-us-list {
+            list-style: none;
+        }
+
+        .why-us-list li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        .why-us-list svg {
+            width: 20px;
+            height: 20px;
+            color: var(--accent);
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: #94A3B8;
+            text-align: center;
+            padding: 2rem 1.5rem;
+            font-size: 0.875rem;
+            margin-top: 4rem;
+        }
+
+        /* ---------------------------------------------------- */
+        /* BOTÃO CIRCULAR FLUTUANTE PADRÃO DO WHATSAPP         */
+        /* ---------------------------------------------------- */
+        .whatsapp-float-btn {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+            z-index: 9999;
+            transition: transform 0.3s ease;
+        }
+
+        .whatsapp-float-btn svg {
+            width: 32px;
+            height: 32px;
+            fill: #ffffff;
+        }
+
+        /* Animação de tremor (shake) a cada 7s */
+        .shake-effect {
+            animation: shake 0.8s cubic-bezier(.36,.07,.19,.97) both;
+        }
+
+        @keyframes shake {
+            10%, 90% { transform: translate3d(-1px, 0, 0) scale(1.08); }
+            20%, 80% { transform: translate3d(2px, 0, 0) scale(1.08); }
+            30%, 50%, 70% { transform: translate3d(-4px, 0, 0) scale(1.08); }
+            40%, 60% { transform: translate3d(4px, 0, 0) scale(1.08); }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                EFATÁ CORRETORA
+            </a>
+        </div>
+    </header>
+
+    <section class="quote-hero">
+        <h1>Falta Muito Pouco Para Sua Cotação Personalizada</h1>
+        <p>Preencha os detalhes finais para que nossos especialistas selecionem a melhor opção das maiores seguradoras do mercado.</p>
+    </section>
+
+    <div class="container">
+        <div class="grid-main">
+            <!-- Formulario de Cotacao -->
+            <div class="card-quote-form">
+                <h2>Solicitar Cotação Gratuita</h2>
+                <p class="sub">Preenchimento rápido em menos de 1 minuto.</p>
+
+                <form id="quoteForm">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" id="nome" name="nome" class="form-control" placeholder="Seu nome" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefone">Telefone / WhatsApp</label>
+                        <input type="tel" id="telefone" name="telefone" class="form-control" placeholder="(00) 00000-0000" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail Principal</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="seuemail@exemplo.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="prazo">Quando pretende contratar o Seguro Auto?</label>
+                        <select id="prazo" name="pretensao_contratacao" class="form-control" required>
+                            <option value="" disabled selected>Selecione uma opção</option>
+                            <option value="Hoje">Hoje</option>
+                            <option value="Nos próximos 30 dias">Nos próximos 30 dias</option>
+                            <option value="Apenas pesquisando">Apenas pesquisando</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="status_veiculo">Seu veículo é:</label>
+                        <select id="status_veiculo" name="status_veiculo" class="form-control" required>
+                            <option value="" disabled selected>Selecione uma opção</option>
+                            <option value="Novo (até 2 anos)">Novo (até 2 anos)</option>
+                            <option value="Seminovo">Seminovo</option>
+                            <option value="Ainda vou comprar">Ainda vou comprar</option>
+                        </select>
+                    </div>
+
+                    <div class="lgpd-box">
+                        <input type="checkbox" id="lgpd_cotacao" required>
+                        <label for="lgpd_cotacao">
+                            Autorizo a Efatá Corretora de Seguros a entrar em contato comigo por telefone, WhatsApp ou e-mail para apresentação da cotação solicitada, conforme a Lei Geral de Proteção de Dados (LGPD).
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-main">Quero Receber Minha Cotação</button>
+                </form>
+            </div>
+
+            <!-- Informações / Coberturas -->
+            <div class="info-content">
+                <div class="social-proof">
+                    <div class="stars">★★★★★</div>
+                    <div class="proof-text">
+                        <h4>Mais de 10.000 Clientes Atendidos</h4>
+                        <p>Avaliados com nota máxima por quem busca tranquilidade e agilidade.</p>
+                    </div>
+                </div>
+
+                <div class="section-box">
+                    <h3>Principais Coberturas Incluídas</h3>
+                    <div class="coverages-grid">
+                        <div class="coverage-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Colisão</div>
+                        <div class="coverage-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Roubo</div>
+                        <div class="coverage-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Furto</div>
+                        <div class="coverage-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Incêndio</div>
+                        <div class="coverage-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Fenômenos Naturais</div>
+                        <div class="coverage-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Perda Total</div>
+                        <div class="coverage-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Danos a Terceiros</div>
+                        <div class="coverage-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Vidros</div>
+                        <div class="coverage-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Assistência 24h</div>
+                        <div class="coverage-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Guincho</div>
+                        <div class="coverage-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Carro Reserva</div>
+                    </div>
+                </div>
+
+                <div class="section-box">
+                    <h3>Por Que Contratar o Seguro Casco?</h3>
+                    <ul class="why-us-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            <div><strong>Proteção Financeira:</strong> Evite custos imprevistos astronômicos em casos de sinistro total ou parcial.</div>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            <div><strong>Economia de Verdade:</strong> Cotamos entre as maiores seguradoras para garantir o menor custo sem perda de coberturas.</div>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            <div><strong>Tranquilidade no Dia a Dia:</strong> Dirija com a certeza de que seu patrimônio está seguro a qualquer hora e lugar.</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Efatá Corretora de Seguros. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- BOTÃO CIRCULAR FLUTUANTE PADRÃO -->
+    <a href="https://wa.me/5511978454925?text=Olá,%20gostaria%20de%20solicitar%20uma%20cotação!" 
+       class="whatsapp-float-btn" 
+       id="floatBtn" 
+       target="_blank" 
+       title="Falar no WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+    </a>
+
+    <script>
+        const NUMERO_WHATSAPP = "5511978454925";
+
+        // Redirecionar os dados do formulário para o WhatsApp
+        document.getElementById('quoteForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const nome = document.getElementById('nome').value;
+            const telefone = document.getElementById('telefone').value;
+            const email = document.getElementById('email').value;
+            const prazo = document.getElementById('prazo').value;
+            const statusVeiculo = document.getElementById('status_veiculo').value;
+
+            let texto = `*NOVA SOLICITAÇÃO DE COTAÇÃO - EFATÁ CORRETORA*\n\n`;
+            texto += `*Nome:* ${nome}\n`;
+            texto += `*Telefone:* ${telefone}\n`;
+            texto += `*E-mail:* ${email}\n`;
+            texto += `*Pretensão de Contratação:* ${prazo}\n`;
+            texto += `*Status do Veículo:* ${statusVeiculo}\n`;
+
+            const textoURI = encodeURIComponent(texto);
+            const urlWhatsApp = `https://wa.me/${NUMERO_WHATSAPP}?text=${textoURI}`;
+
+            window.open(urlWhatsApp, '_blank');
+        });
+
+        // Animação de tremor (shake) no botão flutuante a cada 7 segundos
+        const floatBtn = document.getElementById('floatBtn');
+
+        setInterval(() => {
+            floatBtn.classList.add('shake-effect');
+            
+            setTimeout(() => {
+                floatBtn.classList.remove('shake-effect');
+            }, 800);
+        }, 7000);
+    </script>
+</body>
+</html>

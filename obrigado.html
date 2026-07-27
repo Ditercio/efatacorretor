@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitação Confirmada - Efatá Corretora de Seguros</title>
+    <meta name="description" content="Obrigado por entrar em contato. Sua solicitação foi recebida com sucesso.">
+    <link rel="canonical" href="https://efataseguros.com.br/obrigado.html">
+    <meta property="og:title" content="Obrigado! - Efatá Corretora">
+    <meta property="og:description" content="Recebemos suas informações com sucesso.">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
+
+    <style>
+        :root {
+            --primary: #0F172A;
+            --accent: #2563EB;
+            --accent-hover: #1D4ED8;
+            --success: #16A34A;
+            --success-hover: #15803D;
+            --text-dark: #0F172A;
+            --text-light: #475569;
+            --bg-light: #F8FAFC;
+            --white: #FFFFFF;
+            --border: #E2E8F0;
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            --radius: 12px;
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(2, 132, 199, 0.9) 100%), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"><circle cx="30" cy="30" r="2" fill="%23334155"/></svg>');
+            background-size: cover;
+            color: var(--text-dark);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+        }
+
+        .thankyou-card {
+            background-color: var(--white);
+            max-width: 600px;
+            width: 100%;
+            padding: 3rem 2.5rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+        }
+
+        .icon-success {
+            width: 72px;
+            height: 72px;
+            background-color: #DCFCE7;
+            color: var(--success);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+
+        .thankyou-card h1 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .thankyou-card p {
+            color: var(--text-light);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        /* Botão Dinâmico para eBook */
+        .btn-download-ebook {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            background-color: var(--success);
+            color: var(--white);
+            padding: 1.1rem 2rem;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: background-color 0.2s, transform 0.1s;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
+            width: 100%;
+        }
+
+        .btn-download-ebook:hover {
+            background-color: var(--success-hover);
+            transform: translateY(-2px);
+        }
+
+        .highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            text-align: left;
+            margin-bottom: 2rem;
+            background-color: var(--bg-light);
+            padding: 1.25rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .highlight-item {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .highlight-item svg {
+            color: var(--success);
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+        }
+
+        .btn-home {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--white);
+            padding: 0.875rem 2rem;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: background-color 0.2s;
+        }
+
+        .btn-home:hover {
+            background-color: var(--accent-hover);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="thankyou-card">
+        <div class="icon-success">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+
+        <h1 id="titleText">Solicitação Confirmada!</h1>
+        <p id="msgText">Recebemos sua solicitação com sucesso. Nossa equipe da <strong>Efatá Corretora de Seguros</strong> analisará suas informações e entrará em contato o mais breve possível para apresentar a melhor proposta para o seu perfil.</p>
+
+        <!-- Botão com o link direto para download do eBook (Ativado Dinamicamente) -->
+        <a id="btnEbook" href="ebook-seguro-auto.pdf" download class="btn-download-ebook">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            BAIXAR EBOOK AGORA (PDF)
+        </a>
+
+        <div class="highlights">
+            <div class="highlight-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Atendimento Humanizado
+            </div>
+            <div class="highlight-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Especialistas em Seguro Auto
+            </div>
+            <div class="highlight-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Cotação Personalizada
+            </div>
+            <div class="highlight-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Resposta Rápida
+            </div>
+        </div>
+
+        <a href="index.html" class="btn-home">Voltar ao Início</a>
+    </div>
+
+    <script>
+        // Adaptar a experiência conforme o tipo do lead (Frio = Ebook | Quente = Cotacao)
+        const urlParams = new URLSearchParams(window.location.search);
+        const type = urlParams.get('type');
+
+        if (type === 'ebook') {
+            document.getElementById('titleText').innerText = 'Seu eBook Está Pronto!';
+            document.getElementById('msgText').innerHTML = 'Seu cadastro foi realizado com sucesso. O seu <strong>Guia do Seguro Auto Inteligente</strong> já está liberado para download imediato abaixo:';
+            document.getElementById('btnEbook').style.display = 'inline-flex';
+        }
+    </script>
+</body>
+</html>
