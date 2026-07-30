@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -412,7 +413,7 @@
                             </select>
                         </div>
 
-                        <!-- Campos ocultos garantindo o envio correto e estruturado dos dados de intenção -->
+                        <!-- Campos para mapeamento explícito de intenção -->
                         <input type="hidden" id="hidden_veiculo" name="Possui_Veiculo" value="">
                         <input type="hidden" id="hidden_objetivo" name="Intencao_Compra" value="">
 
@@ -444,7 +445,7 @@
                 <div class="benefit-card">
                     <svg class="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                     <h3>Proteção sob Medida</h3>
-                    <p>Analisamos seu perfil exato para entregar las coberturas que você realmente precisa.</p>
+                    <p>Analisamos seu perfil exato para entregar as coberturas que você realmente precisa.</p>
                 </div>
 
                 <div class="benefit-card">
@@ -492,18 +493,28 @@
             const veiculo = document.getElementById('veiculo').value;
             const objetivo = document.getElementById('objetivo').value;
 
-            // Alimenta os campos ocultos dinamicamente antes do envio para garantir legibilidade no Web3Forms
+            // Alimenta os campos ocultos com os valores corretos
             document.getElementById('hidden_veiculo').value = veiculo;
             document.getElementById('hidden_objetivo').value = objetivo;
 
             const formData = new FormData(form);
 
+            // Converte os dados do FormData em JSON para garantir compatibilidade estrutural com o endpoint do Lovable
+            const dataObj = {};
+            formData.forEach((value, key) => {
+                dataObj[key] = value;
+            });
+
             try {
-                // 1. Envia os dados simultaneamente para o CRM do Lovable e para o Web3Forms
+                // Dispara as requisições de forma independente e isolada para o CRM do Lovable aceitar JSON estruturado
                 await Promise.allSettled([
                     fetch('https://id-preview--dbae4352-2ea6-473d-8daa-d0b9ffe8eee2.lovable.app/api/public/integrations/web3forms', {
                         method: 'POST',
-                        body: formData
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json'
+                        },
+                        body: JSON.stringify(dataObj)
                     }),
                     fetch(form.action, {
                         method: 'POST',
