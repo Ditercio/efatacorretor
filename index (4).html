@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ditercio Silva | EFATÁ Gestão de Seguros & Mkt</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        tealDark: {
+                            950: '#06100F',
+                            900: '#091312',
+                            800: '#11201E',
+                            700: '#162C29',
+                            600: '#1E3B37',
+                        },
+                        gold: {
+                            400: '#E6C687',
+                            500: '#C5A059',
+                            600: '#A37F3C',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #091312;
+            color: #FFFFFF;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .glass-card {
+            background: rgba(17, 32, 30, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(197, 160, 89, 0.2);
+        }
+        .glass-card:hover {
+            border-color: rgba(197, 160, 89, 0.45);
+            box-shadow: 0 10px 30px -10px rgba(197, 160, 89, 0.15);
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFFFFF 0%, #C5A059 60%, #E6C687 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-button {
+            background: linear-gradient(135deg, #C5A059 0%, #A37F3C 100%);
+            transition: all 0.3s ease;
+        }
+        .gold-button:hover {
+            background: linear-gradient(135deg, #D8B36C 0%, #B8924A 100%);
+            box-shadow: 0 0 20px rgba(197, 160, 89, 0.35);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-gold-500 selection:text-tealDark-950">
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-tealDark-900/90 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center text-tealDark-950 font-black text-xl shadow-lg border border-gold-400/50">
+                    E
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-white font-extrabold tracking-wider text-base sm:text-lg leading-tight">EFATÁ</span>
+                    <span class="text-gold-500 text-[10px] sm:text-xs font-semibold tracking-widest uppercase">Gestão de Seguros & Mkt</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300">
+                <a href="#sobre" class="hover:text-gold-500 transition-colors">Sobre</a>
+                <a href="#mision-vision" class="hover:text-gold-500 transition-colors">Missão & Valores</a>
+                <a href="#seguros" class="hover:text-gold-500 transition-colors">Gestão de Seguros</a>
+                <a href="#marketing" class="hover:text-gold-500 transition-colors">Marketing Digital</a>
+                <a href="#solucoes" class="hover:text-gold-500 transition-colors">Soluções</a>
+                <a href="#contato" class="hover:text-gold-500 transition-colors">Contato</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="hidden sm:flex items-center">
+                <a href="https://wa.me/5511978454925?text=Ol%C3%A1%2C%20Ditercio.%20Gostaria%20de%20agendar%20uma%20reuni%C3%A3o%20estrat%C3%A9gica." 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="gold-button text-tealDark-950 font-bold px-5 py-2.5 rounded-lg text-sm flex items-center space-x-2">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span>Falar no WhatsApp</span>
+                </a>
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-tealDark-800 px-4 pt-2 pb-6 space-y-3 border-b border-white/10">
+            <a href="#sobre" class="block text-gray-300 hover:text-gold-500 py-2">Sobre</a>
+            <a href="#mision-vision" class="block text-gray-300 hover:text-gold-500 py-2">Missão & Valores</a>
+            <a href="#seguros" class="block text-gray-300 hover:text-gold-500 py-2">Gestão de Seguros</a>
+            <a href="#marketing" class="block text-gray-300 hover:text-gold-500 py-2">Marketing Digital</a>
+            <a href="#solucoes" class="block text-gray-300 hover:text-gold-500 py-2">Soluções</a>
+            <a href="#contato" class="block text-gray-300 hover:text-gold-500 py-2">Contato</a>
+            <a href="https://wa.me/5511978454925?text=Ol%C3%A1%2C%20Ditercio.%20Gostaria%20de%20agendar%20uma%20reuni%C3%A3o%20estrat%C3%A9gica." 
+               target="_blank" 
+               class="gold-button text-tealDark-950 font-bold w-full py-3 rounded-lg text-center flex justify-center items-center space-x-2 mt-4">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+                <span>Falar no WhatsApp</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-36 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-gradient-to-b from-tealDark-950 via-tealDark-900 to-tealDark-950">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#C5A059_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-500 text-xs sm:text-sm font-semibold tracking-wide">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span>Proteção Patrimonial & Performance Digital</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                        Engenharia de Riscos Corporativos & <span class="gold-gradient-text">Estratégias de Crescimento</span>
+                    </h1>
+
+                    <p class="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
+                        Unindo o rigor técnico da <strong>Gestão de Seguros</strong> à inteligência de dados do <strong>Marketing Digital</strong>. Soluções executivas para blindar ativos empresariais e acelerar a aquisição de clientes B2B.
+                    </p>
+
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="https://wa.me/5511978454925?text=Ol%C3%A1%2C%20Ditercio.%20Gostaria%20de%20uma%20consultoria." target="_blank" class="w-full sm:w-auto gold-button text-tealDark-950 font-bold px-8 py-4 rounded-xl flex items-center justify-center space-x-3 shadow-lg">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                            <span>Solicitar Consultoria Estratégica</span>
+                        </a>
+                        <a href="#solucoes" class="w-full sm:w-auto border border-white/20 hover:border-gold-500 text-white hover:text-gold-500 px-8 py-4 rounded-xl font-semibold transition-all duration-300 text-center">
+                            Explorar Competências
+                        </a>
+                    </div>
+
+                    <!-- Trust indicators -->
+                    <div class="pt-8 border-t border-white/10 grid grid-cols-3 gap-4 text-center lg:text-left">
+                        <div>
+                            <span class="block text-2xl font-bold text-white">100%</span>
+                            <span class="text-xs text-gray-400 uppercase tracking-wider">Conformidade & Rigor</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl font-bold text-gold-500">B2B</span>
+                            <span class="text-xs text-gray-400 uppercase tracking-wider">Foco Corporativo</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl font-bold text-white">360°</span>
+                            <span class="text-xs text-gray-400 uppercase tracking-wider">Visão Integrada</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Executive Card -->
+                <div class="lg:col-span-5">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-gold-500 to-tealDark-600 opacity-30 blur-lg"></div>
+                        <div class="relative glass-card rounded-2xl p-8 space-y-6">
+                            <!-- Emblem / Badge executivo -->
+                            <div class="flex justify-center border-b border-white/10 pb-6">
+                                <div class="flex items-center space-x-3 px-4 py-2 rounded-xl bg-tealDark-800/80 border border-gold-500/30">
+                                    <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center text-tealDark-950 font-black text-lg">
+                                        E
+                                    </div>
+                                    <div class="flex flex-col text-left">
+                                        <span class="text-white font-extrabold text-sm tracking-wider">EFATÁ</span>
+                                        <span class="text-gold-500 text-[9px] font-semibold uppercase tracking-widest">Gestão de Seguros & Mkt</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-4 border-b border-white/10 pb-6">
+                                <div class="w-14 h-14 rounded-full bg-tealDark-700 border-2 border-gold-500 flex items-center justify-center text-gold-500 text-xl font-bold">
+                                    DS
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">Ditercio Silva</h3>
+                                    <p class="text-sm text-gold-500 font-medium">Fundador & Gestor Principal</p>
+                                    <p class="text-xs text-gray-400">Especialista em Seguros Corporativos & Mkt</p>
+                                </div>
+                            </div>
+
+                            <div class="space-y-4 text-sm text-gray-300">
+                                <div class="flex items-start space-x-3">
+                                    <i class="fa-solid fa-graduation-cap text-gold-500 mt-1"></i>
+                                    <span><strong>Gestão de Seguros:</strong> Estruturação de coberturas avançadas, gestão de frotas e regulação de sinistros complexos.</span>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i class="fa-solid fa-chart-line text-gold-500 mt-1"></i>
+                                    <span><strong>Marketing Digital:</strong> Posicionamento de autoridade, estratégias de aquisição (CAC/LTV) e automações B2B.</span>
+                                </div>
+                            </div>
+
+                            <div class="pt-2">
+                                <a href="mailto:contao@efatacorretordeseguros.com.br" class="w-full block text-center py-3 rounded-lg bg-tealDark-700 hover:bg-tealDark-600 text-sm font-semibold text-gray-200 transition-colors border border-white/5">
+                                    <i class="fa-solid fa-envelope me-2 text-gold-500"></i> contao@efatacorretordeseguros.com.br
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academics & About Section -->
+    <section id="sobre" class="py-20 bg-tealDark-800 border-t border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs uppercase tracking-widest text-gold-500 font-bold mb-2">Conhecimento & Competências</h2>
+                <h3 class="text-3xl sm:text-4xl font-bold text-white">Dupla Especialização Estratégica</h3>
+                <p class="text-gray-400 mt-4">Unindo a solidez técnica da transferência de riscos à inovação contínua da economia digital.</p>
+            </div>
+
+            <!-- Quadros de competências -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                <!-- Quadro 1: Seguros -->
+                <div class="glass-card p-8 rounded-2xl relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-gold-500/5 rounded-bl-full group-hover:bg-gold-500/10 transition-colors"></div>
+                    <div class="w-12 h-12 rounded-xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-500 text-2xl mb-6">
+                        <i class="fa-solid fa-building-shield"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Gestão de Seguros</h4>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                        Capacitação aprofundada em análise técnica de apólices, estruturação de coberturas corporativas, transferência de riscos e regulação de sinistros. Visão estratégica para defender o patrimônio corporativo contra eventualidades.
+                    </p>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-gold-500"></i> <span>Mapeamento de Riscos Empresariais e D&O</span></li>
+                        <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-gold-500"></i> <span>Apólices sob medida para Frotas e Responsabilidade Civil</span></li>
+                        <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-gold-500"></i> <span>Auditoria técnica de garantias contratuais</span></li>
+                    </ul>
+                </div>
+
+                <!-- Quadro 2: Marketing -->
+                <div class="glass-card p-8 rounded-2xl relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-gold-500/5 rounded-bl-full group-hover:bg-gold-500/10 transition-colors"></div>
+                    <div class="w-12 h-12 rounded-xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-500 text-2xl mb-6">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Marketing Digital</h4>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                        Domínio em estratégias contemporâneas de Inbound Marketing, tráfego pago, SEO e construção de autoridade digital. Foco em métricas reais de conversão, otimização de custo de aquisição (CAC) e jornada do cliente B2B.
+                    </p>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-gold-500"></i> <span>Geração de Leads Qualificados via Google & Meta Ads</span></li>
+                        <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-gold-500"></i> <span>Automação de Comunicação e CRM Corporativo</span></li>
+                        <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-gold-500"></i> <span>Posicionamento de Autoridade de Marca</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- BLOCO: Missão, Visão e Valores -->
+            <div id="mision-vision" class="pt-8 border-t border-white/10">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-xs uppercase tracking-widest text-gold-500 font-bold mb-2">Diretrizes Institucionais</h2>
+                    <h3 class="text-2xl sm:text-3xl font-bold text-white">Missão, Visão e Valores</h3>
+                    <p class="text-gray-400 text-sm mt-2">A filosofia corporativa que norteia todas as nossas consultorias e estratégias.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Card Missão -->
+                    <div class="glass-card p-8 rounded-2xl relative flex flex-col justify-between border-t-2 border-t-gold-500">
+                        <div>
+                            <div class="w-10 h-10 rounded-lg bg-gold-500/10 text-gold-500 flex items-center justify-center text-xl mb-4">
+                                <i class="fa-solid fa-compass"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-white mb-3">Missão</h4>
+                            <p class="text-gray-300 text-xs sm:text-sm leading-relaxed">
+                                Proteger o patrimônio, a continuidade operacional e a estabilidade financeira das empresas, ao mesmo tempo em que impulsionamos seu crescimento sustentável através de estratégias avançadas de marketing digital e aquisição de clientes B2B.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card Visão -->
+                    <div class="glass-card p-8 rounded-2xl relative flex flex-col justify-between border-t-2 border-t-gold-500">
+                        <div>
+                            <div class="w-10 h-10 rounded-lg bg-gold-500/10 text-gold-500 flex items-center justify-center text-xl mb-4">
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-white mb-3">Visão</h4>
+                            <p class="text-gray-300 text-xs sm:text-sm leading-relaxed">
+                                Ser referência no mercado corporativo pela convergência estratégica entre engenharia de riscos/gestão de seguros e posicionamento digital de alta performance.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card Valores -->
+                    <div class="glass-card p-8 rounded-2xl relative flex flex-col justify-between border-t-2 border-t-gold-500">
+                        <div>
+                            <div class="w-10 h-10 rounded-lg bg-gold-500/10 text-gold-500 flex items-center justify-center text-xl mb-4">
+                                <i class="fa-solid fa-scale-balanced"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-white mb-3">Valores</h4>
+                            <ul class="space-y-2 text-xs text-gray-300">
+                                <li class="flex items-start space-x-2">
+                                    <i class="fa-solid fa-check text-gold-500 mt-1"></i>
+                                    <span><strong>Ética e Transparência:</strong> Relacionamentos de confiança de longo prazo.</span>
+                                </li>
+                                <li class="flex items-start space-x-2">
+                                    <i class="fa-solid fa-check text-gold-500 mt-1"></i>
+                                    <span><strong>Rigor Técnico:</strong> Precisão cirúrgica na mitigação de riscos.</span>
+                                </li>
+                                <li class="flex items-start space-x-2">
+                                    <i class="fa-solid fa-check text-gold-500 mt-1"></i>
+                                    <span><strong>Inovação Contínua:</strong> Orientada estritamente a resultados.</span>
+                                </li>
+                                <li class="flex items-start space-x-2">
+                                    <i class="fa-solid fa-check text-gold-500 mt-1"></i>
+                                    <span><strong>Compromisso de Continuidade:</strong> Foco total na proteção do negócio do cliente.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid: Seguros Corporativos -->
+    <section id="seguros" class="py-20 bg-tealDark-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs uppercase tracking-widest text-gold-500 font-bold mb-2">Competências Principais</h2>
+                <h3 class="text-3xl sm:text-4xl font-bold text-white">Soluções em Gestão de Seguros</h3>
+                <p class="text-gray-400 mt-4">Proteção sob medida para garantir a sustentabilidade financeira da sua empresa.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="glass-card p-6 rounded-xl space-y-4">
+                    <div class="text-gold-500 text-3xl"><i class="fa-solid fa-truck-monster"></i></div>
+                    <h4 class="text-lg font-bold text-white">Seguros de Frotas & Transporte</h4>
+                    <p class="text-gray-400 text-sm">Gestão completa de apólices de frota e logística de carga, reduzindo a sinistralidade e otimizando custos de prêmio.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="glass-card p-6 rounded-xl space-y-4">
+                    <div class="text-gold-500 text-3xl"><i class="fa-solid fa-user-tie"></i></div>
+                    <h4 class="text-lg font-bold text-white">Responsabilidade Civil & D&O</h4>
+                    <p class="text-gray-400 text-sm">Blindagem do patrimônio pessoal de diretores e executivos contra processos judiciais ou administrativos.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="glass-card p-6 rounded-xl space-y-4">
+                    <div class="text-gold-500 text-3xl"><i class="fa-solid fa-file-signature"></i></div>
+                    <h4 class="text-lg font-bold text-white">Seguro Garantia Corporativo</h4>
+                    <p class="text-gray-400 text-sm">Garantias contratuais, judiciais e financeiras de alta liquidez para suprir exigências públicas e privadas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marketing Digital Grid -->
+    <section id="marketing" class="py-20 bg-tealDark-800 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs uppercase tracking-widest text-gold-500 font-bold mb-2">Performance & Atração</h2>
+                <h3 class="text-3xl sm:text-4xl font-bold text-white">Estratégias de Marketing Digital</h3>
+                <p class="text-gray-400 mt-4">Transformando autoridade técnica em funis previsíveis de vendas B2B.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="glass-card p-6 rounded-xl space-y-4">
+                    <div class="text-gold-500 text-3xl"><i class="fa-solid fa-chart-pie"></i></div>
+                    <h4 class="text-lg font-bold text-white">Tráfego Pago Corporativo</h4>
+                    <p class="text-gray-400 text-sm">Campanhas direcionadas de alto valor no Google Ads e Meta Ads com foco em tomada de decisão e menor CAC.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="glass-card p-6 rounded-xl space-y-4">
+                    <div class="text-gold-500 text-3xl"><i class="fa-solid fa-robot"></i></div>
+                    <h4 class="text-lg font-bold text-white">Automações & CRM</h4>
+                    <p class="text-gray-400 text-sm">Integrações inteligentes via WhatsApp e E-mail para nutrir leads e agilizar o ciclo de fechamento comercial.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="glass-card p-6 rounded-xl space-y-4">
+                    <div class="text-gold-500 text-3xl"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                    <h4 class="text-lg font-bold text-white">Inbound & SEO de Autoridade</h4>
+                    <p class="text-gray-400 text-sm">Posicionamento estratégico nos buscadores para atrair tomadores de decisão corporativa de forma orgânica.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integrated Solutions / How I Help Section -->
+    <section id="solucoes" class="py-20 bg-tealDark-900 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 space-y-6">
+                    <h2 class="text-xs uppercase tracking-widest text-gold-500 font-bold">Abordagem Integrada</h2>
+                    <h3 class="text-3xl sm:text-4xl font-bold text-white leading-tight">Como Posso Ajudar Seu Negócio?</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        Enquanto a maioria das empresas trata proteção e aquisição separadamente, nossa metodologia conecta a blindagem financeira (Seguros) com a atração ativa de clientes (Marketing).
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-8 h-8 rounded-lg bg-gold-500/10 text-gold-500 flex items-center justify-center shrink-0 mt-1">
+                                <i class="fa-solid fa-shield"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold">Mitigação de Passivos</h4>
+                                <p class="text-xs text-gray-400">Auditoria detalhada de riscos atuais para eliminar brechas em coberturas contratuais.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-8 h-8 rounded-lg bg-gold-500/10 text-gold-500 flex items-center justify-center shrink-0 mt-1">
+                                <i class="fa-solid fa-arrow-up-right-dots"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold">Crescimento Previsível</h4>
+                                <p class="text-xs text-gray-400">Estruturação de ecossistemas digitais de atração B2B com acompanhamento contínuo de métricas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="glass-card p-6 rounded-xl">
+                            <h4 class="text-gold-500 font-bold text-xl mb-2">01. Diagnóstico de Riscos</h4>
+                            <p class="text-gray-400 text-xs leading-relaxed">Análise técnica de vulnerabilidades operacionais e da presença digital do seu negócio.</p>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl">
+                            <h4 class="text-gold-500 font-bold text-xl mb-2">02. Planejamento Estratégico</h4>
+                            <p class="text-gray-400 text-xs leading-relaxed">Desenho de apólices customizadas e estruturação do funil de marketing corporativo.</p>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl">
+                            <h4 class="text-gold-500 font-bold text-xl mb-2">03. Execução & Automação</h4>
+                            <p class="text-gray-400 text-xs leading-relaxed">Implantação das coberturas e lançamento de campanhas otimizadas com CRM.</p>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl">
+                            <h4 class="text-gold-500 font-bold text-xl mb-2">04. Acompanhamento</h4>
+                            <p class="text-gray-400 text-xs leading-relaxed">Gestão contínua de sinistros e análise quinzenal do retorno sobre o investimento em marketing.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer Section -->
+    <section id="contato" class="py-20 bg-tealDark-800 border-t border-white/10 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card rounded-3xl p-8 sm:p-12 relative overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-7 space-y-6">
+                        <!-- Logo no Rodapé -->
+                        <div class="flex items-center space-x-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center text-tealDark-950 font-black text-xl shadow-lg">
+                                E
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="text-white font-extrabold tracking-wider text-base sm:text-lg leading-tight">EFATÁ</span>
+                                <span class="text-gold-500 text-[10px] font-semibold tracking-widest uppercase">Gestão de Seguros & Mkt</span>
+                            </div>
+                        </div>
+
+                        <span class="text-xs uppercase tracking-widest text-gold-500 font-bold">Atendimento Corporativo</span>
+                        <h3 class="text-3xl sm:text-4xl font-extrabold text-white">Pronto para elevar o nível de segurança e tração da sua empresa?</h3>
+                        <p class="text-gray-300 text-sm">
+                            Entre em contato diretamente para agendar uma reunião ou análise diagnóstica sem compromisso.
+                        </p>
+
+                        <div class="space-y-4 pt-4 text-sm">
+                            <a href="https://wa.me/5511978454925?text=Ol%C3%A1%2C%20Ditercio." target="_blank" class="flex items-center space-x-4 text-gray-300 hover:text-gold-500 transition-colors">
+                                <div class="w-10 h-10 rounded-lg bg-tealDark-700 flex items-center justify-center text-gold-500">
+                                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                                </div>
+                                <span>+55 (11) 97845-4925</span>
+                            </a>
+                            <a href="mailto:contao@efatacorretordeseguros.com.br" class="flex items-center space-x-4 text-gray-300 hover:text-gold-500 transition-colors">
+                                <div class="w-10 h-10 rounded-lg bg-tealDark-700 flex items-center justify-center text-gold-500">
+                                    <i class="fa-solid fa-envelope text-base"></i>
+                                </div>
+                                <span>contao@efatacorretordeseguros.com.br</span>
+                            </a>
+                            <a href="https://efatacorretordeseguros.com.br/" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-4 text-gray-300 hover:text-gold-500 transition-colors">
+                                <div class="w-10 h-10 rounded-lg bg-tealDark-700 flex items-center justify-center text-gold-500">
+                                    <i class="fa-solid fa-globe text-base"></i>
+                                </div>
+                                <span>https://efatacorretordeseguros.com.br/</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-5 bg-tealDark-900 p-6 sm:p-8 rounded-2xl border border-white/10 space-y-4">
+                        <h4 class="text-xl font-bold text-white mb-2">Mensagem Direta</h4>
+                        
+                        <!-- Formulário Web3Forms com Manipulação via JS para Modal de Obrigado -->
+                        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+                            <!-- Web3Forms Access Key -->
+                            <input type="hidden" name="access_key" value="bdf5e2f1-5680-479d-b6de-10f2e7ec7e16">
+                            <input type="hidden" name="subject" value="Novo Lead Corporativo - EFATÁ Portfólio">
+                            <input type="hidden" name="from_name" value="EFATÁ Gestão & Mkt">
+                            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                            <div>
+                                <label for="name" class="block text-xs text-gray-400 mb-1">Seu Nome / Empresa</label>
+                                <input type="text" id="name" name="name" required placeholder="Ex: Roberto - Diretor Operacional" class="w-full px-4 py-3 rounded-lg bg-tealDark-800 border border-white/10 text-white text-sm focus:outline-none focus:border-gold-500">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-xs text-gray-400 mb-1">Seu E-mail Corporativo</label>
+                                <input type="email" id="email" name="email" required placeholder="nome@empresa.com.br" class="w-full px-4 py-3 rounded-lg bg-tealDark-800 border border-white/10 text-white text-sm focus:outline-none focus:border-gold-500">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-xs text-gray-400 mb-1">Telefone / WhatsApp</label>
+                                <input type="tel" id="phone" name="phone" placeholder="(11) 99999-9999" class="w-full px-4 py-3 rounded-lg bg-tealDark-800 border border-white/10 text-white text-sm focus:outline-none focus:border-gold-500">
+                            </div>
+                            <div>
+                                <label for="interest" class="block text-xs text-gray-400 mb-1">Área de Interesse</label>
+                                <select id="interest" name="interest" class="w-full px-4 py-3 rounded-lg bg-tealDark-800 border border-white/10 text-gray-300 text-sm focus:outline-none focus:border-gold-500">
+                                    <option value="Gestão de seguros/contratar seguros">Gestão de seguros/contratar seguros</option>
+                                    <option value="Marketing Digital">Marketing Digital</option>
+                                    <option value="Consultoria Integrada (Seguros + Mkt)">Consultoria Integrada (Seguros + Mkt)</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Checkbox LGPD -->
+                            <div class="flex items-start space-x-3 pt-1">
+                                <input type="checkbox" id="lgpd" name="lgpd" required class="mt-1 w-4 h-4 rounded bg-tealDark-800 border-white/10 text-gold-500 focus:ring-gold-500 focus:ring-offset-tealDark-900">
+                                <label for="lgpd" class="text-xs text-gray-400 leading-tight">
+                                    Concordo com a <a href="#" class="text-gold-500 underline">Política de Privacidade</a> e autorizo o contato em conformidade com a LGPD.
+                                </label>
+                            </div>
+
+                            <button type="submit" id="submitBtn" class="w-full gold-button text-tealDark-950 font-bold py-3.5 rounded-lg text-sm mt-2 flex items-center justify-center space-x-2">
+                                <span id="btnText">Enviar Solicitação</span>
+                                <i id="btnSpinner" class="fa-solid fa-spinner fa-spin hidden"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center text-xs text-gray-500 space-y-2">
+                <p>&copy; EFATÁ Gestão de Seguros & Marketing Digital. Todos os direitos reservados.</p>
+                <p>Ditercio Silva | Atendimento em todo o território nacional.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Executivo de Obrigado / Pós-Envio -->
+    <div id="thankYouModal" class="fixed inset-0 z-50 flex items-center justify-center bg-tealDark-950/90 backdrop-blur-md hidden opacity-0 transition-opacity duration-300 p-4">
+        <div class="glass-card max-w-xl w-full rounded-3xl p-6 sm:p-10 border border-gold-500/40 text-center relative shadow-2xl space-y-6">
+            <!-- Ícone de Confirmação Executivo -->
+            <div class="w-20 h-20 rounded-full bg-gold-500/10 border-2 border-gold-500 text-gold-500 flex items-center justify-center mx-auto text-3xl shadow-lg">
+                <i class="fa-solid fa-check"></i>
+            </div>
+
+            <div class="space-y-2">
+                <span class="text-xs font-bold uppercase tracking-widest text-gold-500">Solicitação Recebida com Sucesso</span>
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-white">Muito Obrigado pelo Contato!</h3>
+                <p class="text-gray-300 text-sm leading-relaxed max-w-md mx-auto">
+                    Recebemos seus dados e nossa equipe técnica já está analisando o seu perfil corporativo.
+                </p>
+            </div>
+
+            <!-- Card de Engajamento Direto para WhatsApp -->
+            <div class="bg-tealDark-900/90 border border-white/10 rounded-2xl p-6 text-left space-y-4">
+                <div class="flex items-center space-x-3 text-gold-500 font-semibold text-sm">
+                    <i class="fa-solid fa-bolt text-lg"></i>
+                    <span>Precisa de atendimento prioritário?</span>
+                </div>
+                <p class="text-xs text-gray-300 leading-relaxed">
+                    Para agilizar a análise da sua demanda ou iniciar o diagnóstico imediatamente, fale direto comigo pelo WhatsApp oficial.
+                </p>
+
+                <a href="https://api.whatsapp.com/send?phone=5511978454925&text=Ol%C3%A1%2C%20Ditercio!%20Acabei%20de%20preencher%20o%20formul%C3%A1rio%20no%20site%20e%20gostaria%20de%20acelerar%20meu%20atendimento." 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="gold-button text-tealDark-950 font-extrabold w-full py-4 rounded-xl flex items-center justify-center space-x-3 text-base shadow-xl">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                    <span>Falar Agora no WhatsApp</span>
+                </a>
+            </div>
+
+            <button id="closeModalBtn" class="text-gray-400 hover:text-white text-xs underline transition-colors pt-2">
+                Fechar e retornar ao site
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Script & Web3Forms Interception -->
+    <script>
+        // Menu Mobile
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        if (btn && menu) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                });
+            });
+        }
+
+        // Submissão do Formulário via Web3Forms AJAX
+        const contactForm = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const btnText = document.getElementById('btnText');
+        const btnSpinner = document.getElementById('btnSpinner');
+        const thankYouModal = document.getElementById('thankYouModal');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                // Feedback visual de carregamento
+                submitBtn.disabled = true;
+                btnText.textContent = 'Enviando...';
+                btnSpinner.classList.remove('hidden');
+
+                const formData = new FormData(contactForm);
+
+                fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(async (response) => {
+                    const json = await response.json();
+                    if (response.status === 200) {
+                        // Limpa o formulário
+                        contactForm.reset();
+
+                        // Exibe Modal de Obrigado
+                        thankYouModal.classList.remove('hidden');
+                        setTimeout(() => {
+                            thankYouModal.classList.remove('opacity-0');
+                        }, 50);
+                    } else {
+                        alert(json.message || 'Ocorreu um erro no envio. Por favor, tente pelo WhatsApp.');
+                    }
+                })
+                .catch((error) => {
+                    console.error(error);
+                    alert('Erro de conexão. Por favor, entre em contato direto pelo WhatsApp.');
+                })
+                .finally(() => {
+                    // Restaura botão
+                    submitBtn.disabled = false;
+                    btnText.textContent = 'Enviar Solicitação';
+                    btnSpinner.classList.add('hidden');
+                });
+            });
+        }
+
+        // Fechar modal de obrigado
+        if (closeModalBtn && thankYouModal) {
+            closeModalBtn.addEventListener('click', () => {
+                thankYouModal.classList.add('opacity-0');
+                setTimeout(() => {
+                    thankYouModal.classList.add('hidden');
+                }, 300);
+            });
+        }
+    </script>
+</body>
+</html>
