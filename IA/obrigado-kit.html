@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DS ADS | Material Liberado - Kit Executivo HVAC</title>
+    <meta name="description" content="Seu acesso ao Kit Executivo B2B: Guia de Tráfego Pago para Serviços HVAC & Planilha de ROI está pronto.">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Inter"', 'sans-serif'],
+                        display: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        dsnavy: '#061326',
+                        dsslates: '#0F2544',
+                        dscyan: '#06B6D4',
+                        dsice: '#F0F9FF',
+                        dsemerald: '#10B981',
+                        dsamber: '#F59E0B'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .article-content p {
+            line-height: 1.85;
+            margin-bottom: 1.5rem;
+            color: #334155;
+            font-size: 1.0625rem;
+        }
+        .article-content h2 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 800;
+            color: #061326;
+            font-size: 1.75rem;
+            margin-top: 2.75rem;
+            margin-bottom: 1rem;
+            letter-spacing: -0.025em;
+            line-height: 1.25;
+        }
+        .article-content h3 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 700;
+            color: #0F2544;
+            font-size: 1.3rem;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+        .article-content ul {
+            margin-bottom: 1.75rem;
+        }
+        .article-content li {
+            color: #334155;
+            line-height: 1.75;
+            padding-left: 1.75rem;
+            position: relative;
+            margin-bottom: 0.85rem;
+        }
+        .article-content li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0.45rem;
+            width: 0.65rem;
+            height: 0.65rem;
+            border-radius: 9999px;
+            background: linear-gradient(135deg, #06B6D4, #10B981);
+        }
+
+        @keyframes pulseRing {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.55); }
+            50% { box-shadow: 0 0 0 14px rgba(16, 185, 129, 0); }
+        }
+        .btn-pulse {
+            animation: pulseRing 2.2s infinite;
+        }
+
+        /* Efeito de transmissão (ondas expansivas) + tremidinha a cada 5 segundos para o WhatsApp flutuante */
+        @keyframes whatsappTransmission {
+            0% {
+                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7), 0 0 0 0 rgba(16, 185, 129, 0.45);
+            }
+            40% {
+                box-shadow: 0 0 0 14px rgba(16, 185, 129, 0), 0 0 0 28px rgba(16, 185, 129, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0), 0 0 0 0 rgba(16, 185, 129, 0);
+            }
+        }
+
+        @keyframes whatsappShake {
+            0%, 40% { transform: translate(0, 0) rotate(0deg); }
+            42% { transform: translate(-3px, 2px) rotate(-5deg); }
+            44% { transform: translate(3px, -2px) rotate(5deg); }
+            46% { transform: translate(-3px, 2px) rotate(-5deg); }
+            48% { transform: translate(3px, -2px) rotate(5deg); }
+            50% { transform: translate(0, 0) rotate(0deg); }
+            100% { transform: translate(0, 0) rotate(0deg); }
+        }
+        .whatsapp-periodic-shake {
+            animation: whatsappTransmission 5s ease-out infinite, whatsappShake 5s ease-in-out infinite;
+        }
+
+        .fade-slide-in {
+            animation: fadeSlideIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes fadeSlideIn {
+            from { opacity: 0; transform: translateY(14px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+    <!-- COLE AQUI SEU PIXEL DO META ADS E SUA TAG DO GOOGLE ADS / GTM -->
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-cyan-500 selection:text-white">
+
+    <!-- =========================================================================
+         CABEÇALHO ORIGINAL
+         ========================================================================= -->
+    <header class="sticky top-0 z-40 bg-dsnavy/95 backdrop-blur-md text-white border-b border-slate-800/90 shadow-lg">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between py-3.5">
+                <a href="index.html" class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center text-dsnavy shadow-md">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18m0-18l-3 3m3-3l3 3m-3 15l-3-3m3 3l3-3M3 12h18M3 12l3-3m-3 3l3 3m15-3l-3-3m3 3l-3 3"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="font-display font-extrabold text-xl tracking-tight text-white">DS <span class="text-cyan-400">ADS</span></span>
+                        <span class="block text-[11px] text-slate-400 font-medium">Performance em Tráfego Pago B2B • Setor HVAC</span>
+                    </div>
+                </a>
+
+                <div class="flex items-center gap-3">
+                    <span class="hidden sm:inline-block text-xs font-semibold text-slate-300 bg-slate-800/80 px-3 py-1.5 rounded-full border border-slate-700">
+                        Aquisição de Clientes para Prestadores HVAC
+                    </span>
+                    <span class="text-[11px] font-bold bg-slate-800/90 text-cyan-400 px-2.5 py-1 rounded-lg border border-slate-700">
+                        Leitura: <span id="scroll-pct-label">0%</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full h-1 bg-slate-900">
+            <div id="reading-progress-bar" class="h-full bg-gradient-to-r from-cyan-400 via-emerald-400 to-amber-400 transition-all duration-150" style="width: 0%"></div>
+        </div>
+    </header>
+
+    <div id="toast-container" class="fixed bottom-24 right-5 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+    <!-- =========================================================================
+         PÁGINA DE DOWNLOAD DA ISCA DIGITAL (LEAD NÃO QUALIFICADO)
+         ========================================================================= -->
+    <main id="view-download" class="article-stage fade-slide-in">
+        <section class="min-h-[84vh] flex items-center justify-center py-16 px-4 bg-slate-50">
+            <div class="max-w-2xl w-full bg-white rounded-3xl shadow-xl border border-slate-200 p-8 sm:p-12 text-center">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-50 text-cyan-700 border border-cyan-200 text-xs font-bold uppercase tracking-wider mb-6">
+                    Biblioteca DS ADS • Acesso Liberado
+                </div>
+
+                <div class="w-20 h-20 rounded-2xl bg-cyan-50 text-cyan-600 flex items-center justify-center mx-auto mb-6 border border-cyan-100">
+                    <svg class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                </div>
+
+                <h1 class="font-display text-2xl sm:text-3xl font-extrabold text-dsnavy mb-4">
+                    Material Liberado, <span id="unqualified-lead-name" class="text-cyan-600">Empresário</span>!
+                </h1>
+
+                <p class="text-slate-600 text-base leading-relaxed mb-8">
+                    Seu acesso ao <strong>Kit Executivo B2B: Guia de Tráfego Pago para Serviços HVAC & Planilha de ROI</strong> está pronto. Clique no botão abaixo para abrir o arquivo oficial no Google Drive.
+                </p>
+
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 mb-8">
+                    <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <div class="text-left">
+                            <span class="text-xs font-extrabold text-emerald-600 uppercase">Material de Estudo • DS ADS</span>
+                            <h3 class="font-display font-bold text-dsnavy text-base">Kit Executivo HVAC (Google Drive)</h3>
+                            <p class="text-xs text-slate-500">Guia oficial de campanhas Google Ads & Meta Ads para prestadores</p>
+                        </div>
+                        <a href="https://drive.google.com/file/d/1TSPaR2s2HhEdiopaRb0qxquRYEBzQN2z/view?usp=sharing" target="_blank"
+                           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-dsnavy hover:bg-dsslates text-white font-bold px-6 py-3.5 rounded-xl transition-all cursor-pointer shrink-0 shadow">
+                            <i class="fa-brands fa-google-drive text-cyan-400"></i>
+                            <span>Abrir Guia no Google Drive</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="border-t border-slate-100 pt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="index.html" class="text-xs font-bold text-cyan-700 hover:text-cyan-900 underline cursor-pointer">
+                        ← Voltar ao Primeiro Artigo
+                    </a>
+                    <span class="hidden sm:inline text-slate-300">|</span>
+                    <a href="estrategia-trafego-pago.html" class="text-xs font-bold text-cyan-700 hover:text-cyan-900 underline cursor-pointer">
+                        Reler Estratégia de Mídia →
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =========================================================================
+         RODAPÉ ORIGINAL
+         ========================================================================= -->
+    <footer class="bg-slate-950 text-slate-400 py-10 px-4 border-t border-slate-900 text-xs">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <span class="font-display font-extrabold text-white">DS ADS</span>
+                <span>• Tráfego Pago e Performance Comercial para Empresas de Instalação, Manutenção e PMOC de Ar-Condicionado.</span>
+            </div>
+            <div class="text-slate-500">
+                Google Ads Partners • Meta Ads Certified • Especialistas em Climatização
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            try {
+                const raw = sessionStorage.getItem('dsads_lead');
+                if (raw) {
+                    const lead = JSON.parse(raw);
+                    if (lead.name) {
+                        document.getElementById('unqualified-lead-name').textContent = lead.name.split(' ')[0];
+                    }
+                }
+            } catch (e) {}
+        });
+
+        function handleScrollTracking() {
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+            const scrollableHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let pct = 0;
+            if (scrollableHeight > 0) {
+                pct = Math.min(100, Math.round((scrollTop / scrollableHeight) * 100));
+            }
+            const bar = document.getElementById('reading-progress-bar');
+            const label = document.getElementById('scroll-pct-label');
+            if (bar) bar.style.width = `${pct}%`;
+            if (label) label.textContent = `${pct}%`;
+        }
+        window.addEventListener('scroll', handleScrollTracking, { passive: true });
+        window.addEventListener('load', handleScrollTracking);
+    </script>
+</body>
+</html>

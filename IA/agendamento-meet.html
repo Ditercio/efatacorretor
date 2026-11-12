@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DS ADS | Briefing de Performance e Reunião Estratégica via Google Meet</title>
+    <meta name="description" content="Assista ao Briefing de Performance e desbloqueie sua Reunião Estratégica via Google Meet com especialistas em tráfego pago para climatização.">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Inter"', 'sans-serif'],
+                        display: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        dsnavy: '#061326',
+                        dsslates: '#0F2544',
+                        dscyan: '#06B6D4',
+                        dsice: '#F0F9FF',
+                        dsemerald: '#10B981',
+                        dsamber: '#F59E0B'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .article-content p {
+            line-height: 1.85;
+            margin-bottom: 1.5rem;
+            color: #334155;
+            font-size: 1.0625rem;
+        }
+        .article-content h2 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 800;
+            color: #061326;
+            font-size: 1.75rem;
+            margin-top: 2.75rem;
+            margin-bottom: 1rem;
+            letter-spacing: -0.025em;
+            line-height: 1.25;
+        }
+        .article-content h3 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 700;
+            color: #0F2544;
+            font-size: 1.3rem;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+        .article-content ul {
+            margin-bottom: 1.75rem;
+        }
+        .article-content li {
+            color: #334155;
+            line-height: 1.75;
+            padding-left: 1.75rem;
+            position: relative;
+            margin-bottom: 0.85rem;
+        }
+        .article-content li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0.45rem;
+            width: 0.65rem;
+            height: 0.65rem;
+            border-radius: 9999px;
+            background: linear-gradient(135deg, #06B6D4, #10B981);
+        }
+
+        @keyframes pulseRing {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.55); }
+            50% { box-shadow: 0 0 0 14px rgba(16, 185, 129, 0); }
+        }
+        .btn-pulse {
+            animation: pulseRing 2.2s infinite;
+        }
+
+        /* Efeito de transmissão (ondas expansivas) + tremidinha a cada 5 segundos para o WhatsApp flutuante */
+        @keyframes whatsappTransmission {
+            0% {
+                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7), 0 0 0 0 rgba(16, 185, 129, 0.45);
+            }
+            40% {
+                box-shadow: 0 0 0 14px rgba(16, 185, 129, 0), 0 0 0 28px rgba(16, 185, 129, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0), 0 0 0 0 rgba(16, 185, 129, 0);
+            }
+        }
+
+        @keyframes whatsappShake {
+            0%, 40% { transform: translate(0, 0) rotate(0deg); }
+            42% { transform: translate(-3px, 2px) rotate(-5deg); }
+            44% { transform: translate(3px, -2px) rotate(5deg); }
+            46% { transform: translate(-3px, 2px) rotate(-5deg); }
+            48% { transform: translate(3px, -2px) rotate(5deg); }
+            50% { transform: translate(0, 0) rotate(0deg); }
+            100% { transform: translate(0, 0) rotate(0deg); }
+        }
+        .whatsapp-periodic-shake {
+            animation: whatsappTransmission 5s ease-out infinite, whatsappShake 5s ease-in-out infinite;
+        }
+
+        .fade-slide-in {
+            animation: fadeSlideIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes fadeSlideIn {
+            from { opacity: 0; transform: translateY(14px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+    <!-- COLE AQUI SEU PIXEL DO META ADS E SUA TAG DO GOOGLE ADS / GTM -->
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-cyan-500 selection:text-white">
+
+    <!-- =========================================================================
+         CABEÇALHO ORIGINAL
+         ========================================================================= -->
+    <header class="sticky top-0 z-40 bg-dsnavy/95 backdrop-blur-md text-white border-b border-slate-800/90 shadow-lg">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between py-3.5">
+                <a href="index.html" class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center text-dsnavy shadow-md">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18m0-18l-3 3m3-3l3 3m-3 15l-3-3m3 3l3-3M3 12h18M3 12l3-3m-3 3l3 3m15-3l-3-3m3 3l-3 3"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="font-display font-extrabold text-xl tracking-tight text-white">DS <span class="text-cyan-400">ADS</span></span>
+                        <span class="block text-[11px] text-slate-400 font-medium">Performance em Tráfego Pago B2B • Setor HVAC</span>
+                    </div>
+                </a>
+
+                <div class="flex items-center gap-3">
+                    <span class="hidden sm:inline-block text-xs font-semibold text-slate-300 bg-slate-800/80 px-3 py-1.5 rounded-full border border-slate-700">
+                        Aquisição de Clientes para Prestadores HVAC
+                    </span>
+                    <span class="text-[11px] font-bold bg-slate-800/90 text-cyan-400 px-2.5 py-1 rounded-lg border border-slate-700">
+                        Leitura: <span id="scroll-pct-label">0%</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full h-1 bg-slate-900">
+            <div id="reading-progress-bar" class="h-full bg-gradient-to-r from-cyan-400 via-emerald-400 to-amber-400 transition-all duration-150" style="width: 0%"></div>
+        </div>
+    </header>
+
+    <div id="toast-container" class="fixed bottom-24 right-5 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+    <!-- =========================================================================
+         PÁGINA DE VENDAS DE TRÁFEGO PAGO (VSL + GOOGLE MEET)
+         ========================================================================= -->
+    <main id="view-sales" class="article-stage fade-slide-in bg-dsnavy text-white min-h-screen">
+        <div class="bg-emerald-600 text-white py-3 px-4 text-center text-xs sm:text-sm font-bold shadow-md">
+            <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4">
+                <span>✓ Tudo certo, <span id="qualified-lead-name">Empresário(a)</span>! Seu acesso ao <strong>Kit Executivo de Tráfego Pago HVAC</strong> foi liberado.</span>
+                <a href="https://drive.google.com/file/d/1TSPaR2s2HhEdiopaRb0qxquRYEBzQN2z/view?usp=sharing" target="_blank"
+                   class="bg-dsnavy hover:bg-slate-900 text-emerald-300 px-3.5 py-1 rounded-lg text-xs font-extrabold transition-all cursor-pointer inline-flex items-center gap-1.5">
+                    <i class="fa-brands fa-google-drive"></i>
+                    <span>Abrir Guia no Google Drive</span>
+                </a>
+            </div>
+        </div>
+
+        <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20">
+            <div class="text-center max-w-3xl mx-auto mb-8">
+                <span id="qualified-profile-badge" class="inline-block px-3.5 py-1 rounded-full bg-cyan-500/20 border border-cyan-400/40 text-cyan-300 text-xs font-extrabold uppercase tracking-wider mb-4">
+                    Parceria Estratégica • DS ADS Tráfego Pago
+                </span>
+                <h1 class="font-display text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight mb-4">
+                    Assista ao Briefing de Performance e Desbloqueie Sua <span class="text-cyan-400">Reunião Estratégica via Google Meet</span>
+                </h1>
+                <p id="sales-subtitle-dynamic" class="text-slate-300 text-sm sm:text-base">
+                    Veja como estruturamos campanhas de Google Ads e Meta Ads para preencher a agenda da sua empresa de instalação e manutenção de ar-condicionado.
+                </p>
+            </div>
+
+            <!-- PLAYER VSL -->
+            <div class="max-w-4xl mx-auto bg-slate-900 rounded-3xl overflow-hidden border-2 border-slate-700/90 shadow-2xl relative">
+                <div id="vsl-viewport" class="relative aspect-video bg-gradient-to-br from-slate-900 via-dsslates to-dsnavy flex flex-col items-center justify-center p-6 sm:p-12 text-center select-none overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1400&q=80"
+                         onerror="this.style.display='none'"
+                         alt="Estratégia de Tráfego Pago DS ADS"
+                         class="absolute inset-0 w-full h-full object-cover opacity-15">
+
+                    <div id="vsl-state-start" class="relative z-10 flex flex-col items-center">
+                        <button onclick="startVSL()" class="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-cyan-400 hover:bg-cyan-300 text-dsnavy flex items-center justify-center shadow-2xl btn-pulse transition-transform hover:scale-105 cursor-pointer mb-4">
+                            <svg class="w-9 h-9 sm:w-11 sm:h-11 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </button>
+                        <span class="bg-dsnavy/90 text-white text-xs sm:text-sm font-bold px-4 py-2 rounded-full border border-slate-700">
+                            Clique para assistir ao briefing (O botão de agendamento no Google Meet será liberado ao final)
+                        </span>
+                    </div>
+
+                    <div id="vsl-state-playing" class="hidden relative z-10 max-w-2xl mx-auto">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/20 border border-cyan-400/40 text-cyan-300 text-xs font-extrabold mb-5">
+                            <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+                            <span id="vsl-slide-tag">CAPÍTULO 01/04 • O PODER DO GOOGLE ADS PARA HVAC</span>
+                        </div>
+                        <h3 id="vsl-caption-headline" class="font-display text-xl sm:text-3xl font-extrabold text-white mb-4 leading-snug">
+                            "Enquanto você depende de indicações, seus concorrentes capturam todos os clientes corporativos que buscam instalação e manutenção no Google."
+                        </h3>
+                        <p id="vsl-caption-sub" class="text-sm sm:text-lg text-cyan-300 font-medium">
+                            Nós estruturamos campanhas profissionais de tráfego pago para colocar sua empresa no topo.
+                        </p>
+                    </div>
+
+                    <div id="vsl-state-finished" class="hidden relative z-10 max-w-xl mx-auto">
+                        <div class="w-16 h-16 rounded-full bg-emerald-500 text-dsnavy flex items-center justify-center mx-auto mb-4 shadow-lg">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                        </div>
+                        <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-white mb-2">
+                            Briefing Concluído! Reunião Estratégica Liberada.
+                        </h3>
+                        <p class="text-slate-300 text-sm mb-6">
+                            Clique no botão abaixo para agendar sua consultoria de tráfego pago via Google Meet com nossos especialistas.
+                        </p>
+                        <a href="#meet-booking-section" class="btn-pulse inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-dsnavy font-extrabold px-7 py-3.5 rounded-xl text-sm sm:text-base transition-all shadow-lg">
+                            <span>Agendar Reunião Estratégica no Google Meet</span>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-slate-950 px-4 py-3 border-t border-slate-800 flex flex-wrap items-center justify-between gap-3">
+                    <div class="flex items-center gap-3 flex-1 min-w-[200px]">
+                        <button onclick="toggleVSL()" id="vsl-play-btn" class="text-white hover:text-cyan-400 text-xs font-extrabold px-2.5 py-1 rounded bg-slate-800 cursor-pointer">
+                            ▶ Play
+                        </button>
+                        <div class="flex-1 h-2 bg-slate-800 rounded-full overflow-hidden">
+                            <div id="vsl-progress" class="h-full bg-gradient-to-r from-cyan-400 to-emerald-400 transition-all duration-200" style="width: 0%"></div>
+                        </div>
+                        <span id="vsl-time-display" class="text-xs font-mono text-slate-400">00:00 / 00:16</span>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <button onclick="toggleVSLSpeed()" id="vsl-speed-btn" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 px-2.5 py-1.5 rounded-lg font-bold cursor-pointer">
+                            1x
+                        </button>
+                        <button onclick="completeVSL()" class="text-xs bg-slate-800 hover:bg-slate-700 text-cyan-300 border border-slate-700 px-3 py-1.5 rounded-lg font-bold transition-all cursor-pointer">
+                            Avançar para Agendamento →
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AGENDA GOOGLE MEET -->
+            <div id="meet-booking-section" class="max-w-4xl mx-auto mt-12">
+                <div id="meet-locked-state" class="bg-slate-900/90 border border-slate-700 rounded-3xl p-8 text-center">
+                    <div class="w-12 h-12 rounded-2xl bg-slate-800 text-amber-400 flex items-center justify-center mx-auto mb-3">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                    </div>
+                    <h3 class="font-display text-lg font-bold text-white mb-1">Agendamento Google Meet Disponível Após o Briefing</h3>
+                    <p class="text-xs sm:text-sm text-slate-400 max-w-md mx-auto">
+                        Conclua o vídeo acima para liberar os horários disponíveis para sua reunião estratégica de tráfego pago.
+                    </p>
+                </div>
+
+                <div id="meet-unlocked-state" class="hidden bg-white text-slate-800 rounded-3xl shadow-2xl overflow-hidden border-2 border-emerald-400 fade-slide-in">
+                    <div class="bg-gradient-to-r from-dsnavy to-dsslates p-6 sm:p-8 text-white flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <div>
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-extrabold mb-2">
+                                Reunião Online via Google Meet • 25 Minutos (Estratégia Gratuita)
+                            </div>
+                            <h2 class="font-display text-2xl font-extrabold">Consultoria de Tráfego Pago para Climatização</h2>
+                            <p class="text-xs sm:text-sm text-slate-300 mt-1">Análise de mercado local, estimativa de orçamento de anúncios e planejamento de captação de clientes.</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm px-4 py-3 rounded-2xl border border-white/15 shrink-0">
+                            <span class="block text-[10px] uppercase tracking-wider text-cyan-300 font-extrabold">DS ADS Performance</span>
+                            <span class="font-bold text-sm">Especialista Google & Meta Ads</span>
+                        </div>
+                    </div>
+
+                    <div id="meet-form-body" class="p-6 sm:p-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div>
+                                <label class="block text-xs font-extrabold uppercase tracking-wider text-slate-500 mb-2.5">1. Selecione o Dia Preferencial</label>
+                                <div class="grid grid-cols-3 gap-2 mb-5">
+                                    <button type="button" onclick="selectMeetDay(this, 'Amanhã')" class="meet-day-opt p-3 rounded-xl border-2 border-emerald-500 bg-emerald-50 text-dsnavy font-bold text-xs text-center cursor-pointer">
+                                        Amanhã<span class="block text-[10px] font-normal text-slate-500">Disponível</span>
+                                    </button>
+                                    <button type="button" onclick="selectMeetDay(this, 'Quinta-feira')" class="meet-day-opt p-3 rounded-xl border border-slate-200 hover:border-cyan-400 text-slate-700 font-bold text-xs text-center cursor-pointer">
+                                        Quinta-feira<span class="block text-[10px] font-normal text-slate-500">4 horários</span>
+                                    </button>
+                                    <button type="button" onclick="selectMeetDay(this, 'Sexta-feira')" class="meet-day-opt p-3 rounded-xl border border-slate-200 hover:border-cyan-400 text-slate-700 font-bold text-xs text-center cursor-pointer">
+                                        Sexta-feira<span class="block text-[10px] font-normal text-slate-500">3 horários</span>
+                                    </button>
+                                </div>
+
+                                <label class="block text-xs font-extrabold uppercase tracking-wider text-slate-500 mb-2.5">2. Selecione o Horário (Brasília)</label>
+                                <div class="grid grid-cols-2 gap-2 mb-5">
+                                    <button type="button" onclick="selectMeetTime(this, '09:30')" class="meet-time-opt py-2.5 px-4 rounded-xl border-2 border-emerald-500 bg-emerald-50 text-dsnavy font-bold text-sm cursor-pointer">09:30</button>
+                                    <button type="button" onclick="selectMeetTime(this, '14:00')" class="meet-time-opt py-2.5 px-4 rounded-xl border border-slate-200 hover:border-cyan-400 text-slate-700 font-bold text-sm cursor-pointer">14:00</button>
+                                    <button type="button" onclick="selectMeetTime(this, '16:30')" class="meet-time-opt py-2.5 px-4 rounded-xl border border-slate-200 hover:border-cyan-400 text-slate-700 font-bold text-sm cursor-pointer">16:30</button>
+                                    <button type="button" onclick="selectMeetTime(this, '18:00')" class="meet-time-opt py-2.5 px-4 rounded-xl border border-slate-200 hover:border-cyan-400 text-slate-700 font-bold text-sm cursor-pointer">18:00</button>
+                                </div>
+
+                                <label for="meet-service-scope" class="block text-xs font-extrabold uppercase tracking-wider text-slate-500 mb-2">3. Foco Principal da Reunião</label>
+                                <select id="meet-service-scope" onchange="updateMeetSummary()" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm font-semibold text-dsnavy focus:border-cyan-500 outline-none bg-white">
+                                    <option value="Google Ads para Capturar Orçamentos de Instalação e Manutenção">Google Ads para Capturar Orçamentos de Instalação e Manutenção</option>
+                                    <option value="Meta Ads (Instagram/Facebook) para Contratos PMOC e B2B">Meta Ads (Instagram/Facebook) para Contratos PMOC e B2B</option>
+                                    <option value="Gestão Completa de Tráfego Pago (Google + Meta Ads)">Gestão Completa de Tráfego Pago (Google + Meta Ads)</option>
+                                </select>
+                            </div>
+
+                            <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
+                                <div>
+                                    <h4 class="font-display font-extrabold text-dsnavy text-base mb-4">Resumo da Reunião Google Meet</h4>
+                                    <div class="space-y-2.5 text-xs text-slate-600 mb-6">
+                                        <div class="flex justify-between py-1.5 border-b border-slate-200">
+                                            <span class="font-semibold">Solicitante:</span>
+                                            <span id="meet-summary-name" class="font-bold text-dsnavy">Empresário Parceiro</span>
+                                        </div>
+                                        <div class="flex justify-between py-1.5 border-b border-slate-200">
+                                            <span class="font-semibold">WhatsApp:</span>
+                                            <span id="meet-summary-contact" class="font-bold text-dsnavy">Confirmado</span>
+                                        </div>
+                                        <div class="flex justify-between py-1.5 border-b border-slate-200 gap-2">
+                                            <span class="font-semibold shrink-0">Foco:</span>
+                                            <span id="meet-summary-scope" class="font-bold text-cyan-700 text-right">Google Ads para Orçamentos</span>
+                                        </div>
+                                        <div class="flex justify-between py-1.5">
+                                            <span class="font-semibold">Data & Horário:</span>
+                                            <span id="meet-summary-datetime" class="font-extrabold text-emerald-600">Amanhã às 09:30</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button onclick="confirmMeetBooking()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold py-4 px-6 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer text-sm sm:text-base">
+                                    <span>Confirmar Reunião via Google Meet</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="meet-confirmed-body" class="hidden p-8 sm:p-12 text-center bg-emerald-50/40">
+                        <div class="w-16 h-16 rounded-full bg-emerald-500 text-white flex items-center justify-center mx-auto mb-4 shadow-lg">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                        </div>
+                        <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-dsnavy mb-2">
+                            Reunião Estratégica Agendada no Google Meet!
+                        </h3>
+                        <p class="text-slate-600 text-sm max-w-lg mx-auto mb-6">
+                            Enviamos o convite do calendário para o seu e-mail e a confirmação no seu WhatsApp. Salve o link da sua sala abaixo:
+                        </p>
+
+                        <div class="max-w-md mx-auto bg-white border border-slate-200 rounded-xl p-4 mb-6 flex items-center justify-between gap-3 shadow-sm">
+                            <div class="text-left overflow-hidden">
+                                <span class="block text-[10px] font-extrabold uppercase text-slate-400">Sala Google Meet • <span id="final-meet-slot">Amanhã às 09:30</span></span>
+                                <span id="meet-room-link" class="text-xs sm:text-sm font-mono font-bold text-cyan-700 truncate block">https://meet.google.com/tmq-zwpj-sdc</span>
+                            </div>
+                            <button onclick="copyMeetLink()" class="px-3.5 py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-dsnavy text-xs font-extrabold shrink-0 cursor-pointer">
+                                Copiar Link
+                            </button>
+                        </div>
+
+                        <a href="index.html" class="text-xs font-bold text-slate-500 hover:text-dsnavy underline cursor-pointer">
+                            Voltar ao Início do Portal
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =========================================================================
+         BOTÃO FLUTUANTE DE WHATSAPP (SOMENTE NA PÁGINA DA VSL • TRANSMISSÃO + TREMENDO A CADA 5s)
+         ========================================================================= -->
+    <a id="floating-whatsapp-btn"
+       href="https://wa.me/5511978454925?text=Olá,%20vi%20a%20VSL%20da%20DS%20ADS,%20estou%20aquecido%20e%20quero%20escalar%20meu%20negócio%20de%20climatização!"
+       target="_blank"
+       aria-label="Fale conosco no WhatsApp"
+       class="whatsapp-periodic-shake flex fixed bottom-6 right-6 z-50 w-16 h-16 bg-emerald-500 hover:bg-emerald-400 text-slate-950 rounded-full items-center justify-center shadow-2xl transition-transform hover:scale-110 cursor-pointer group">
+        <i class="fa-brands fa-whatsapp text-3xl font-bold"></i>
+        <span class="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-slate-900 text-white text-xs font-bold px-3.5 py-2 rounded-xl shadow-xl border border-slate-700 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+            Falar com Especialista DS ADS
+        </span>
+    </a>
+
+    <!-- =========================================================================
+         RODAPÉ ORIGINAL
+         ========================================================================= -->
+    <footer class="bg-slate-950 text-slate-400 py-10 px-4 border-t border-slate-900 text-xs">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <span class="font-display font-extrabold text-white">DS ADS</span>
+                <span>• Tráfego Pago e Performance Comercial para Empresas de Instalação, Manutenção e PMOC de Ar-Condicionado.</span>
+            </div>
+            <div class="text-slate-500">
+                Google Ads Partners • Meta Ads Certified • Especialistas em Climatização
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const WEB3FORMS_ACCESS_KEY = "bdf5e2f1-5680-479d-b6de-10f2e7ec7e16";
+
+        const appState = {
+            lead: {
+                name: 'Empresário Parceiro',
+                email: '',
+                whatsapp: '',
+                tier: 'qualified_enterprise'
+            },
+            vslTimerId: null,
+            vslElapsed: 0,
+            vslDuration: 16,
+            vslPlaying: false,
+            vslSpeed: 1,
+            meetDay: 'Amanhã',
+            meetTime: '09:30'
+        };
+
+        const vslTimelineSlides = [
+            {
+                at: 0,
+                tag: 'CAPÍTULO 01/04 • O PODER DO GOOGLE ADS PARA HVAC',
+                headline: '"Enquanto você depende de indicações, seus concorrentes capturam todos os clientes corporativos que buscam instalação e manutenção no Google."',
+                sub: 'Nós estruturamos campanhas profissionais de tráfego pago para colocar sua empresa no topo.'
+            },
+            {
+                at: 4,
+                tag: 'CAPÍTULO 02/04 • GOOGLE ADS + META ADS',
+                headline: '"Unimos a intenção imediata de compra no Google com a segmentação refinada de síndicos e gestores no Meta Ads."',
+                sub: 'Garantimos fluxo contínuo de orçamentos e contratos recorrentes.'
+            },
+            {
+                at: 8,
+                tag: 'CAPÍTULO 03/04 • METODOLOGIA DE PERFORMANCE DS ADS',
+                headline: '"Gestão completa de contas, páginas de alta conversão, criativos validados e otimização diária focada em ROAS."',
+                sub: 'Você foca na entrega técnica enquanto nossa agência cuida da captação.'
+            },
+            {
+                at: 12,
+                tag: 'CAPÍTULO 04/04 • REUNIÃO ESTRATÉGICA VIA GOOGLE MEET',
+                headline: '"Agende agora uma consultoria de 25 minutos via Google Meet com nossos especialistas em tráfego pago para climatização."',
+                sub: 'Descubra o potencial de captação na sua região de atendimento.'
+            }
+        ];
+
+        window.addEventListener('DOMContentLoaded', () => {
+            try {
+                const raw = sessionStorage.getItem('dsads_lead');
+                if (raw) {
+                    const parsed = JSON.parse(raw);
+                    appState.lead = { ...appState.lead, ...parsed };
+
+                    if (parsed.name) {
+                        document.getElementById('qualified-lead-name').textContent = parsed.name.split(' ')[0];
+                        document.getElementById('meet-summary-name').textContent = parsed.name;
+                    }
+                    if (parsed.whatsapp) {
+                        document.getElementById('meet-summary-contact').textContent = parsed.whatsapp;
+                    }
+
+                    const badge = document.getElementById('qualified-profile-badge');
+                    const subDynamic = document.getElementById('sales-subtitle-dynamic');
+                    const scopeSelect = document.getElementById('meet-service-scope');
+
+                    if (parsed.tier === 'qualified_enterprise') {
+                        badge.textContent = 'Parceria Corporativa Avançada • DS ADS Tráfego Pago';
+                        subDynamic.textContent = 'Veja como escalamos empresas consolidadas de climatização com campanhas agressivas de Google Ads e Meta Ads focadas em contratos PMOC.';
+                        scopeSelect.value = 'Gestão Completa de Tráfego Pago (Google + Meta Ads)';
+                    } else if (parsed.tier === 'qualified_pme') {
+                        badge.textContent = 'Parceria PME • Crescimento Local de Prestadores HVAC';
+                        subDynamic.textContent = 'Veja como preenchemos a agenda da sua equipe técnica com orçamentos de instalação e manutenção na sua região.';
+                        scopeSelect.value = 'Google Ads para Capturar Orçamentos de Instalação e Manutenção';
+                    }
+                }
+            } catch (e) {}
+            updateMeetSummary();
+        });
+
+        function handleScrollTracking() {
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+            const scrollableHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let pct = 0;
+
+            if (scrollableHeight > 0) {
+                pct = Math.min(100, Math.round((scrollTop / scrollableHeight) * 100));
+            }
+
+            const bar = document.getElementById('reading-progress-bar');
+            const label = document.getElementById('scroll-pct-label');
+            if (bar) bar.style.width = `${pct}%`;
+            if (label) label.textContent = `${pct}%`;
+        }
+
+        window.addEventListener('scroll', handleScrollTracking, { passive: true });
+        window.addEventListener('load', handleScrollTracking);
+
+        function startVSL() {
+            document.getElementById('vsl-state-start').classList.add('hidden');
+            document.getElementById('vsl-state-finished').classList.add('hidden');
+            document.getElementById('vsl-state-playing').classList.remove('hidden');
+
+            appState.vslPlaying = true;
+            document.getElementById('vsl-play-btn').textContent = '⏸ Pausar';
+
+            clearInterval(appState.vslTimerId);
+            appState.vslTimerId = setInterval(() => {
+                if (!appState.vslPlaying) return;
+
+                appState.vslElapsed += appState.vslSpeed;
+                renderVSLProgress();
+
+                if (appState.vslElapsed >= appState.vslDuration) {
+                    completeVSL();
+                }
+            }, 1000);
+        }
+
+        function toggleVSL() {
+            if (appState.vslElapsed >= appState.vslDuration) {
+                appState.vslElapsed = 0;
+                startVSL();
+                return;
+            }
+            if (!appState.vslTimerId) {
+                startVSL();
+                return;
+            }
+            appState.vslPlaying = !appState.vslPlaying;
+            document.getElementById('vsl-play-btn').textContent = appState.vslPlaying ? '⏸ Pausar' : '▶ Play';
+        }
+
+        function toggleVSLSpeed() {
+            appState.vslSpeed = appState.vslSpeed === 1 ? 2 : 1;
+            document.getElementById('vsl-speed-btn').textContent = `${appState.vslSpeed}x`;
+            showToast(`Velocidade alterada para ${appState.vslSpeed}x`, 'info');
+        }
+
+        function renderVSLProgress() {
+            const elapsedClamped = Math.min(appState.vslDuration, appState.vslElapsed);
+            const pct = (elapsedClamped / appState.vslDuration) * 100;
+            document.getElementById('vsl-progress').style.width = `${pct}%`;
+
+            const secStr = String(elapsedClamped).padStart(2, '0');
+            document.getElementById('vsl-time-display').textContent = `00:${secStr} / 00:${appState.vslDuration}`;
+
+            const slide = [...vslTimelineSlides].reverse().find(s => elapsedClamped >= s.at);
+            if (slide) {
+                document.getElementById('vsl-slide-tag').textContent = slide.tag;
+                document.getElementById('vsl-caption-headline').textContent = slide.headline;
+                document.getElementById('vsl-caption-sub').textContent = slide.sub;
+            }
+        }
+
+        function completeVSL() {
+            clearInterval(appState.vslTimerId);
+            appState.vslPlaying = false;
+            appState.vslElapsed = appState.vslDuration;
+            renderVSLProgress();
+
+            document.getElementById('vsl-state-start').classList.add('hidden');
+            document.getElementById('vsl-state-playing').classList.add('hidden');
+            document.getElementById('vsl-state-finished').classList.remove('hidden');
+            document.getElementById('vsl-play-btn').textContent = '↻ Rever';
+
+            document.getElementById('meet-locked-state').classList.add('hidden');
+            document.getElementById('meet-unlocked-state').classList.remove('hidden');
+
+            showToast('Agenda Google Meet liberada! Escolha seu horário abaixo.', 'success');
+        }
+
+        function selectMeetDay(btn, dayText) {
+            appState.meetDay = dayText;
+            document.querySelectorAll('.meet-day-opt').forEach(el => {
+                el.classList.remove('border-2', 'border-emerald-500', 'bg-emerald-50', 'text-dsnavy');
+                el.classList.add('border', 'border-slate-200', 'text-slate-700');
+            });
+            btn.classList.remove('border', 'border-slate-200', 'text-slate-700');
+            btn.classList.add('border-2', 'border-emerald-500', 'bg-emerald-50', 'text-dsnavy');
+            updateMeetSummary();
+        }
+
+        function selectMeetTime(btn, timeText) {
+            appState.meetTime = timeText;
+            document.querySelectorAll('.meet-time-opt').forEach(el => {
+                el.classList.remove('border-2', 'border-emerald-500', 'bg-emerald-50', 'text-dsnavy');
+                el.classList.add('border', 'border-slate-200', 'text-slate-700');
+            });
+            btn.classList.remove('border', 'border-slate-200', 'text-slate-700');
+            btn.classList.add('border-2', 'border-emerald-500', 'bg-emerald-50', 'text-dsnavy');
+            updateMeetSummary();
+        }
+
+        function updateMeetSummary() {
+            const slotStr = `${appState.meetDay} às ${appState.meetTime}`;
+            const scopeVal = document.getElementById('meet-service-scope').value;
+
+            document.getElementById('meet-summary-datetime').textContent = slotStr;
+            document.getElementById('final-meet-slot').textContent = slotStr;
+            document.getElementById('meet-summary-scope').textContent = scopeVal;
+        }
+
+        async function confirmMeetBooking() {
+            const btn = document.querySelector('#meet-form-body button');
+            const originalText = btn ? btn.innerHTML : '';
+            if (btn) {
+                btn.disabled = true;
+                btn.innerHTML = '<span>Confirmando e enviando alerta...</span>';
+            }
+
+            try {
+                await fetch("https://api.web3forms.com/submit", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Accept": "application/json"
+                    },
+                    body: JSON.stringify({
+                        access_key: WEB3FORMS_ACCESS_KEY,
+                        subject: `NOVO AGENDAMENTO DE REUNIÃO NO MEET - DS ADS`,
+                        from_name: "DS ADS Agenda Google Meet",
+                        name: appState.lead.name || document.getElementById('meet-summary-name').textContent,
+                        email: appState.lead.email || "Não informado",
+                        whatsapp: appState.lead.whatsapp || document.getElementById('meet-summary-contact').textContent,
+                        foco_reuniao: document.getElementById('meet-summary-scope').textContent,
+                        data_horario: document.getElementById('meet-summary-datetime').textContent,
+                        link_meet: "https://meet.google.com/tmq-zwpj-sdc",
+                        status: "Reunião Agendada com Sucesso"
+                    })
+                });
+            } catch (err) {
+                console.warn("Erro ao enviar notificação de agendamento:", err);
+            } finally {
+                if (btn) {
+                    btn.disabled = false;
+                    btn.innerHTML = originalText;
+                }
+            }
+
+            document.getElementById('meet-room-link').textContent = "https://meet.google.com/tmq-zwpj-sdc";
+
+            document.getElementById('meet-form-body').classList.add('hidden');
+            document.getElementById('meet-confirmed-body').classList.remove('hidden');
+            showToast('Reunião Google Meet confirmada com sucesso! Alerta enviado por e-mail.', 'success');
+        }
+
+        function copyMeetLink() {
+            const link = document.getElementById('meet-room-link').textContent;
+            const temp = document.createElement('input');
+            temp.value = link;
+            document.body.appendChild(temp);
+            temp.select();
+            document.execCommand('copy');
+            document.body.removeChild(temp);
+            showToast('Link da sala Google Meet copiado!', 'success');
+        }
+
+        function showToast(message, type = 'info') {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+
+            const styles = {
+                success: 'bg-emerald-600 text-white border-emerald-400',
+                warning: 'bg-amber-400 text-dsnavy border-amber-300',
+                info: 'bg-dsnavy text-white border-cyan-500/40'
+            };
+
+            toast.className = `pointer-events-auto flex items-center gap-2.5 px-4 py-3 rounded-xl shadow-2xl border text-xs sm:text-sm font-bold fade-slide-in ${styles[type] || styles.info}`;
+            toast.innerHTML = `<span>${message}</span>`;
+
+            container.appendChild(toast);
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                toast.style.transition = 'opacity 0.3s ease';
+                setTimeout(() => toast.remove(), 300);
+            }, 3800);
+        }
+    </script>
+</body>
+</html>
